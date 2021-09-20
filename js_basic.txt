@@ -65,5 +65,7 @@ git checkout -b "branchName"
 
 git add .
 
+// commit  added files:
 
+git commit -m "message here"
 
