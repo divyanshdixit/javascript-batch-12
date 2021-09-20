@@ -61,5 +61,9 @@ git checkout -b "branchName"
 
 // to send files at github server:
 
+//add all files:
+
 git add .
+
+
 
