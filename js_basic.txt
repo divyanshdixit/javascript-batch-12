@@ -69,3 +69,7 @@ git add .
 
 git commit -m "message here"
 
+// push files to server:
+
+git push 
+
