@@ -1,0 +1,65 @@
+// js is prog. lang for making web pages interactive
+
+latest version is ES8 (ECMA Script) 2020
+
+<script> 
+
+</script>
+
+
+what JS can do :
+
+it can chagnge html content
+it can change or make new html attributes
+change css style 
+can show or hide any html element
+can create any new html element
+we can use and fire events
+
+
+How we can use JS:-
+
+.html
+<script> 
+ js code
+ console.log('javascript code')
+</script>
+
+.js 
+
+index.js 
+// external js files can't include <script> tag
+
+
+How will we write output in js:->
+
+//1- writing in html element using-> DOM with innerHTML
+document.getElementById('para').innerHTML = 'output';
+
+//2- using alert: 
+
+alert('output')
+
+//3- write in brower console: using console.log()
+
+console.log('output')
+
+// 4- write int html output:
+document.write('hello')
+
+
+// 
+switch to other branch(already made):
+
+git checkout branchName
+
+
+// to make new branch and checkout to it :
+
+git checkout -b "branchName"
+
+
+// to send files at github server:
+
+git add .
+
