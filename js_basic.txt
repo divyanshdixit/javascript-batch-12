@@ -36,7 +36,7 @@ How will we write output in js:->
 //1- writing in html element using-> DOM with innerHTML
 document.getElementById('para').innerHTML = 'output';
 
-//2- using alert: 
+//2- using alert:  form validation
 
 alert('output')
 
@@ -44,7 +44,7 @@ alert('output')
 
 console.log('output')
 
-// 4- write int html output:
+// 4- write int html output: Never use quick testing
 document.write('hello')
 
 
@@ -73,3 +73,5 @@ git commit -m "message here"
 
 git push 
 
+
+// git pull 

@@ -1,9 +1,10 @@
 console.log('syntax file ');
 
 // js is case senstive language: 
-// js is loosly data type lang
+// js is loosly data type lang;
 
-// rule for syntaxing:
+
+// format for syntaxing:
 
 // 1- Declare a variable
 // 2- assign value to variable (define the variable)
@@ -22,9 +23,12 @@ var a = 10; //(declare and define)
 var b = 20;
 
 var result; 
-result = 10 + 20;
+result = 10 + 20; // a + b
 
-console.log(result)
+// var result = a + b;
+ 
+
+console.log(result, 'helo', )
 console.log('Sum of 10 and 20 is ',result);
 
 
