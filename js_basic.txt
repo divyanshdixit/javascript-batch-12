@@ -74,4 +74,6 @@ git commit -m "message here"
 git push 
 
 
-// git pull 
+// to get the files(take pull)
+
+git pull (in main branch)
