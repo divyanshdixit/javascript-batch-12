@@ -3,6 +3,10 @@ console.log('syntax file ');
 // js is case senstive language: 
 // js is loosly data type lang;
 
+// rule for variable name:
+
+// first letter can not be numeric.
+var $; var _d; var n1; var Nrrr; 
 
 // format for syntaxing:
 
