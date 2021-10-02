@@ -3,6 +3,9 @@ var x = {
     age: 25,
     n1:10,
     n2:20,
+    subtract:function (){
+        return this;
+    },
     getName:function(){
         console.log('getting name')
         return '';
@@ -11,7 +14,7 @@ var x = {
         return x + y;
     },
     sum:function(){
-        return x.n1 + x.n2
+        return this.n1 + this.n2
     }
 }
 
