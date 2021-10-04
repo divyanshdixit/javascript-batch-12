@@ -1,27 +1,92 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="/style.css"/> // 1s
     
 </head>
+
+first paint => 
 <body>
     <!-- -->
     <div>
         <h1 id="" class="" style="color:red"> Index html file </h1>
-        <p></p>
+        
+        <p> para </p>
+
+        <button type="button" id="btn1" onclick="clickFunction()" ondblclick="console.log('duoble clicked!')"> Click Me </button>
+
+        <input type="text" id="input1"  />
     </div>
 
     <!-- <script src="js_syntax.js"> </script> -->
     <script src="index.js"> </script>
     
-    <script>
+    <script type="text/javascript">
+
+        var x = 10;
+        
+        x = 20;
+        console.log(x); // 20
+
+    function clickFunction(){
+        console.log('button is clicked!')
+    }
+
+    document.getElementById('btn1').onclick= function(){
+        console.log('button clicked 2nd time!')
+    };
+
+    document.getElementById('btn1').onclick= function(){
+        console.log('button clicked 3rd time!')
+    };
+
+    // document.getElementById('btn1').addEventListener('click', function(){
+    //     console.log('button clicked 2nd time!')
+    // })
+
+    // document.getElementById('btn1').addEventListener('click', function(){
+    //     console.log('button clicked 3rd time!')
+    // })
+
+    document.getElementById('input1').onblur = function(){
+        console.log('you are out of focus!')
+    }
+
+    document.getElementById('input1').onfocus = function(){
+        console.log('you are in focus!')
+    }
+
+    document.getElementById('input1').onchange = function(e){
+        console.log(e); // event parameter has all the info realted to js event 
+        console.log(e.target.value);
+
+        var str = e.target.value;
+
+        // length limitation:
+        if(str.length <= 10){
+            console.log('everything is alright!');
+            location.href = "https://github.com/divyanshdixit"
+        }else{
+            console.log(`Can't put more than 10 chars`)
+        }
+    }
+        
+        
+        
         console.log('statement');
         console.log('statement 2');
 
         var a = 10;
+        10 + 20
+        10 + '10'
+
+        '10' // string
+        '9555644954' * 10 
+        "1", '1'
         var b = 20;
 
         // var a = 10; var b = 20; ctrl+/

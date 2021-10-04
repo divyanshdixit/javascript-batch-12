@@ -1,10 +1,13 @@
 // js is prog. lang for making web pages interactive
 
+// typescript
 latest version is ES8 (ECMA Script) 2020
+
 
 <script> 
 
 </script>
+
 
 
 what JS can do :
@@ -20,9 +23,11 @@ we can use and fire events
 How we can use JS:-
 
 .html
+
+
 <script> 
- js code
- console.log('javascript code')
+    js code
+    console.log('javascript code')
 </script>
 
 .js 
