@@ -76,3 +76,34 @@ console.log(x);
 delete x.setColor
 delete x.color
 console.log(x)
+
+
+// Object's can't be compared:
+
+// comparing two js objects always return false.
+
+var obj1 = {
+    title:'first'
+}
+
+var obj2 = { // 1001
+    title:'first'
+}
+
+// reference is comparing here not value.
+console.log(obj1 == obj2)
+
+
+var c = 10;
+var v = c;
+v = 20;
+console.log(v, c)
+console.log(v, v==c);
+
+// avoid copying the object in other object/variable
+
+var obj3 = obj2; // reference is copying instead of value
+console.log(obj3, obj3 == obj2);
+
+obj3.date = new Date().toLocaleTimeString();
+console.log(obj3, obj2)
