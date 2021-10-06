@@ -1,3 +1,6 @@
 1- write practice code for all operator 
 
 2- simple calculator using object literal: as discussed
+
+3- var str = "i live in cityname"; // using function
+return => I Live In Cityname

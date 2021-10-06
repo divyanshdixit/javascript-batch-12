@@ -1,4 +1,5 @@
 // "",''
+// strings are immuatable(not changable)
 var x = 'div';
 
 // length: to get the string length:

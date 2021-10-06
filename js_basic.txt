@@ -35,6 +35,8 @@ How we can use JS:-
 index.js 
 // external js files can't include <script> tag
 
+<script src="path_of_file"> </script>
+
 
 How will we write output in js:->
 
@@ -43,17 +45,17 @@ document.getElementById('para').innerHTML = 'output';
 
 //2- using alert:  form validation
 
-alert('output')
+alert('output'); confirm(), prompt('enter you age..', 0)
 
-//3- write in brower console: using console.log()
+//3- write in brower console: using window.console.log()
 
 console.log('output')
 
-// 4- write int html output: Never use quick testing
+// 4- write in html output: Never use , just for quick testing
 document.write('hello')
 
 
-// 
+// git clone url 
 switch to other branch(already made):
 
 git checkout branchName
