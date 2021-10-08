@@ -108,6 +108,40 @@ console.log(first.concat('second'), ''.concat('asdas', 'adsasd'));
 var or = "             Divyansh       Dixit                 ";
 console.log(or.trim())
 
-// ...
 
-split()
+// extracting string chars:
+
+// charAt(position) => return char at given index
+// return empty string if index is not found 
+
+// charCodeAt(position) => return the unicode(ASCII) of char at given index
+
+var str2 = "Divyansh";
+// str2[0] => read-only purpose 
+str2[0] = 'A';
+// str2.charAt(0);
+console.log(str2.charAt(0), str2[0], str2.charCodeAt(0));
+
+
+// document.getElementById('uname').onkeydown = function(e){
+//     console.log(e, e.key, e.which);
+//     if(e.keyCode === 32){ // e.target.value == '   '
+//         alert('Spaces are not alleoed');
+//         return false;
+//     }else{
+//         return true;
+//     }
+// }
+
+document.getElementById('uname').onchange = function(){
+    console.log(this.value)
+    if(this.value.charCodeAt(0) == 32){
+        alert('spaces are not allowed')
+        this.value = '';
+        return false;
+    }else{
+        return true;
+    }
+} 
+
+// split(): 
