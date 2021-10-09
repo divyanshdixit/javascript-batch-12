@@ -7,6 +7,12 @@ var b = 20;
 var a = 10;
 var b = 20;
 
-if(){}else{}
-(cond) ? '' : ''
+// if(){}else{}
+// (cond) ? '' : ''
 // js statement, js expressions
+
+function geth(){
+
+    var po = [];
+    for()
+}

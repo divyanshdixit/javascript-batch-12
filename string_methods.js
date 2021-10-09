@@ -116,7 +116,8 @@ console.log(or.trim())
 
 // charCodeAt(position) => return the unicode(ASCII) of char at given index
 
-var str2 = "Divyansh";
+var str2 = "Div,yansh";
+
 // str2[0] => read-only purpose 
 str2[0] = 'A';
 // str2.charAt(0);
@@ -124,24 +125,61 @@ console.log(str2.charAt(0), str2[0], str2.charCodeAt(0));
 
 
 // document.getElementById('uname').onkeydown = function(e){
-//     console.log(e, e.key, e.which);
-//     if(e.keyCode === 32){ // e.target.value == '   '
-//         alert('Spaces are not alleoed');
+//     console.log(e, e.key, e.which, e.target.value, typeof e.target.value);
+//     // if(e.keyCode === 32){ // e.target.value == '   '
+//     //     alert('Spaces are not alleoed');
+//     //     return false;
+//     // }else{
+//     //     return true;
+//     // }
+// }
+
+// document.getElementById('uname').onchange = function(){
+//     console.log(this.value)
+//     if(this.value.charCodeAt(0) == 32){
+//         alert('spaces are not allowed')
+//         this.value = '';
 //         return false;
 //     }else{
 //         return true;
 //     }
+// } 
+
+// convert string into array:
+
+// split(delimeter): 
+
+// split string with the delimeter passed:
+// if omitted then return whole string as an array or passed delimeter not found then reutnr whole stirng
+
+// 
+console.log(str2.split(','))
+
+// toString()
+// var f = function(){
+//     var arr = fetch('https://jsonplaceholder.typicode.com/posts')
+//    return {
+//        "status":'OK',
+//        "data":arr
+//    }
 // }
+// promise 
+// document.getElementById('demo').innerHTML = f()
 
-document.getElementById('uname').onchange = function(){
-    console.log(this.value)
-    if(this.value.charCodeAt(0) == 32){
-        alert('spaces are not allowed')
-        this.value = '';
-        return false;
-    }else{
-        return true;
-    }
-} 
 
-// split(): 
+// console.log(f())
+// console.log(f.toString())
+console.log( Boolean(false) )
+
+
+// Prototype: parent, all method an props belongs to prototype
+// you can add new/own props and method to all stirng.
+
+String.prototype.myCustomFunction = function(param){
+    console.log('custom func using prototype ' + param)
+    return '';
+}
+
+console.log(str2.myCustomFunction(str2), first.myCustomFunction(first));
+
+
