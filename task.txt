@@ -4,3 +4,20 @@
 
 3- var str = "i live in cityname"; // using function
 return => I Live In Cityname
+
+4- reverse the array element.
+
+var arr = [10, 'string', 30, 40];
+
+5- reverse the string:
+
+var str = 'reverse';
+
+6- reverse the number:
+
+var num = 123456;
+
+
+7- 'ab', 'abc', 'abcd', 'abcde'
+
+['ab'], ['ab', 'c_'], ['ab', 'cd'], ['ab', 'cd', 'e_'] 
