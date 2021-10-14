@@ -158,7 +158,13 @@ console.log( (10 < 3) ? 'true' : (5 > 10 ? 'true 2 ' : 'false 2') )
 // 7- typeof operator: (typeof , instance of ) => typeof will return the data type of varaible , 
 // instance of will check the data type of given vairable( return true or false) (work only for object type variable)
 
+// typeof => used for primitive values
+// instanceof => used for non-primtive value
+
 var z = '10';
 console.log(typeof z) // number, string
 
-// console.log(z instanceof Number)
+console.log(z instanceof String) // false
+
+var c = new String('10');
+console.log(c instanceof String) // true
