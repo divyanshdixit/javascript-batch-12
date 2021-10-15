@@ -77,6 +77,8 @@ console.log(Array.isArray(arr));
 // const j = new customFun(); // object/instance
 // console.log(h, j.constructor);
 
+// get the constructor property: using varaibleName.constructor
+
 function checkArray(array){
     return array.constructor.toString().indexOf('Array') > -1
 }
@@ -128,6 +130,94 @@ console.log(arr);
 
 
 // deleting the array element:
-splice ()
+// splice():
+
+// can be used to add/delete element from array from any position.
+// splice (position(where new elements should be added), how many should remove, {no of new items to be added})
+// return the removed element as an array.
+// change the original array.
 
 
+var arr1 = [1,3,5,7,9];
+
+// console.log(arr1.splice(1,0,2), arr1)
+// console.log(arr1.splice(1,1,2), arr1)
+console.log(arr1.splice(1,1), arr1)
+
+
+var arrobj = [
+    {name:'divyansh'},
+    function(params) {
+        
+    },
+    true,
+    'false'
+]
+
+var returnObj = arrobj.splice(0,1);
+console.log(returnObj[0].name);
+console.log(arrobj);
+
+// merging (concat) two or more array:
+
+// concat()=> create new array by merging tow or more arrays.
+// it also take any datatype as an argument.
+// will not change original array.
+
+const arr2 = [1,2,3];
+const arr3 = [4,5,6];
+const arr4 = [4,5,6];
+console.log(arr2 + 7)
+// 
+console.log(arr2.concat(arr3, arr4, 7, {}, function (params) {}, 9), arr2);
+
+
+// slice(start, end):
+// slice out a part of array into new array
+// start from given position
+// it'll slice out till end index - 1; 
+// if end index is omitted it'll slice out whole part of array.
+// start and end index can be -ve also.
+
+// will not change the original array .
+
+var mergeArray = arr2.concat(arr3);
+// [1,2,3,4,5,6]
+console.log(mergeArray.slice(0,3)) // [1,2,3,4]
+console.log(mergeArray.slice(1), mergeArray) // [1,2,3,4]
+
+// prototype: used to add new prop or method in array.
+
+var emptyArr = [];
+
+function capitalletter(str){
+
+    var arraysplit = str.split(' '); // arra
+    return arraysplit.getCapitalLetter();
+}
+
+const name = () => {}
+
+// anonymous function must define before calling;
+
+Array.prototype.getCapitalLetter = function() {
+    console.log(this);
+    let txt = '';
+    this.forEach((val) => {
+        txt += val.slice(0, 1).toUpperCase() + val.slice(1) + " ";
+    });
+    
+    return txt;
+}
+// console.log(arraysplit.getCapitalLetter())
+// console.log( str.getCapitalLetter(str));
+// sort():
+
+// function capitalletter (str){
+
+    
+    // return arraysplit.getCapitalLetter();
+// }
+console.log(capitalletter('my name is divyansh'));
+
+    
