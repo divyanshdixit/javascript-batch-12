@@ -1,35 +1,45 @@
-// js variabe can hold many datatypes
+// js variable can hold many datatypes
 
 // two types of values:
 
-// primitive values  (immutable, not changed) => they don't have theri own props and method
+// primitive values  (immutable, not changed) => they don't have theri own props and method(function)
 
-// non-primitive values (mutable , can change) => they have props and methods
+// non-primitive values (mutable , can change) => they have own props and methods
 
 // Complex datatype: function(){} => js function are object 
 
 //Primitve :
-
+// var a = ;
 // String 
 // Number
-// Boolean
-// undefined
+// Boolean => true or false
+// undefined => not recommend by js 
 
 // Non-primitive:
 
 // Object
-// Array => they are special kind of object
+// Array => they are special kind of objects
+// datatype of array, object and null is an object.
+
 // Null
 
+// var json = {
+//     "key":"value"
+// }
 
-// const y = {
-//     fname:'Divyansh',
-//     lname:'Dixit'
-// } // 1001
+const y = {
+    // key: value
+    fname:"Divyansh",
+    lname:'Dixit'
+} // 1001
 
 // y = '10'
 
 // const x = 10;
+
+
+var x; 
+console.log(typeof x)
 
 var c = 10;
 

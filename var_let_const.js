@@ -13,6 +13,8 @@ var y = 20; // global scope
     console.log(y)
 }
 
+console.log(x)
+
 // console.log(x); // gives error of undefined
 
 console.log(y)
@@ -23,18 +25,19 @@ console.log(y)
 
 var l = 10;
 
-console.log(l);
+console.log(l); // 10
 
 {
     let l = 2;
     
-    // var l = 2;
-    console.log(l)
+    // var l = 4;
+    console.log(l)// 4
 }
-var l = 20;
-console.log(l)
 
-// Reldeclaring a variable with var is allowed anywhere in the program.
+var l = 20;
+console.log(l) // 20
+
+// Redeclaring a variable with var is allowed anywhere in the program.
 
 // Re-decalring var variable with let and vice versa in same scope is not allowed 
 

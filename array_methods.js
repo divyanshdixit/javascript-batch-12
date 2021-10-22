@@ -220,4 +220,164 @@ Array.prototype.getCapitalLetter = function() {
 // }
 console.log(capitalletter('my name is divyansh'));
 
-    
+
+// copyWithin() => copiy the array element to another positon in same array(overwrite the exisint value).
+
+// change original array.
+
+// syntax: copyWithin(target, start, end)
+// target=> index position to copy the element to.
+// ending index not included.
+
+var arr5 = [1,2,3,4];
+arr5.copyWithin(1,0,2); // 123
+console.log(arr5);
+
+var g = [1,2,3];
+g.copyWithin(2,0,3); // 123
+console.log(g);
+//  1,2,1,2, 5,6
+//  1,2,1,2,3
+
+// entries: return array iterator object with key/value pairs.
+var u = arr5.entries()
+console.log(u) // => return array iteratoir
+
+// to get the items of iterator:
+
+for(i of u){
+    console.log(i);
+}
+
+// keys(): create an array iteraotr object only conatianing keys(index) of an array.
+
+{
+    let a = arr5.keys();
+    for(i of a){
+        console.log(i)
+    }
+}
+
+// values(): create an array iteraotr object only conatianing values of an array.
+
+{
+    let a = arr5.values();
+    for(i of a){
+        console.log(i)
+    }
+}
+
+
+// every(): check if all elements in array passes the given condition, if any value is false
+// then every() return false else true.
+
+// arrow function related :*****
+
+// function nrml(n1){
+//     console.log('something!');
+//     return 'nrml function';    
+// }
+
+// var nrml = function(n1){ // anonymous function
+
+// }
+
+// var nrml = () => { 
+//     console.log('something!');
+//     return 'nrml function';    
+// }
+
+// nrml = 10;
+
+// nrml();
+
+// *******
+
+console.log(arr5.every((val, index, array) => {
+    return val < 5
+}))
+
+
+// filter() => return a new array filled with all array elements that passes given condition.
+
+console.log(arr5.filter((currentval, index, array) => currentval < 5 ))
+
+var age = [20,12,18,16,40];
+let res = age.filter(val => {
+    console.log(val,val>=18)
+    return val >= 18;
+})
+
+console.log(res);
+
+
+// find(): retrun the value of first element in array that passes a test.
+
+let res1 = arr5.find(val => {
+    return val == 4;
+})
+
+console.log(res1, arr5);
+
+// findIndex(): retrun the index of first element in array that passes a test.
+
+let res2 = arr5.findIndex(val => {
+    return val == 4;
+})
+
+console.log(res2, arr5);
+
+
+// includes():  check whether an array element contains a specific element or not, 
+// return true if element exist else false.
+// case senstive.
+// includes(element, start) => earching start from given index., if omiited searching start from 0 index
+// we can use regex as well.
+
+{
+    let arr = ['first', 2,3,4, 'last'];
+    let res = arr.includes('last', 5);
+    console.log(res);
+}
+
+// map() => retrun a new array with result of calling a function for each array element
+
+{
+
+let arr = [1,2,3,4,5]
+let res = arr.map( (val, index, array)=> {
+    return val * 2;
+});
+
+// arr.forEach(val => {
+//     console.log(val *2);
+// })
+
+console.log(res, arr);
+}
+
+
+// reverse(): given array will be reversed, chnage the original array.
+
+
+// reduce(): reduces the array to a single value.
+
+// excute a  provided function for each value of the array(left to right).
+// return value of the function is stored in an accumulator(variable).
+
+// doesn't change the original array.
+// arr.reduce(function(total, currentVal, index, arr){
+//     // total = required => inittailvalue or previously returned value of the function
+// }, initialValue);
+
+// return the accumulated value of the function
+
+{
+    let res = arr5.reduce((total,val)=> {
+        console.log(total, val);
+        return total + val; 
+    });
+    console.log(res);
+}
+
+// sort(): 

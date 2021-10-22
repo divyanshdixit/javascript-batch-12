@@ -11,13 +11,35 @@ var arr = [10, 'string', 30, 40];
 
 5- reverse the string:
 
-var str = 'reverse';
+var str = 'reverse'; len/2
+eeversr
+esverer
+esrever
 
+str[len-(i+1)] = str[i] swapping for two variables
+str[5] = str[1]
+str[4] = str[2]
+
+var x = 10;
+var y = 20;
+
+var temp=0;
+temp = x; // 10
+x = y;// 20
+y = temp; // 10
+
+clg(x,y)
+
+for(){
+
+}
 6- reverse the number:
 
-var num = 123456;
+var num = 123456/10; => 1
 
+/, %
+while, for 
 
 7- 'ab', 'abc', 'abcd', 'abcde'
 
-['ab'], ['ab', 'c_'], ['ab', 'cd'], ['ab', 'cd', 'e_'] 
+['ab'], ['ab', 'c_'], ['ab', 'cd'], ['ab', 'cd', 'e_']

@@ -10,7 +10,7 @@ var x = 10;
 console.log(x);
 
 // provoke or call
-name()
+name();
 
 // function is an object in js. function , no such data type in js 
 
