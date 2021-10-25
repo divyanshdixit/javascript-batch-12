@@ -366,6 +366,9 @@ console.log(res, arr);
 // return value of the function is stored in an accumulator(variable).
 
 // doesn't change the original array.
+
+//syntax: 
+ 
 // arr.reduce(function(total, currentVal, index, arr){
 //     // total = required => inittailvalue or previously returned value of the function
 // }, initialValue);
@@ -380,4 +383,156 @@ console.log(res, arr);
     console.log(res);
 }
 
-// sort(): 
+// sort(compare function ): 
+// return sorted array on behalf of unicode(ascii) of items.
+// default sorting in ascending order.
+// case senstive sorting.
+// change the original array.
+
+// ascending order sorting :
+// descending order sorting :
+
+var unsortArr = [19,10, 8, 78, 89, 2, 34,3,0]; // a= 19, b = 10, // 10, 19
+// [0,2,3,8,9,10,34,78,89]
+// console.log(unsortArr.sort());
+
+var stringArr = ['Dog', 'Cat', 'boy', 'aPple', 'aora'];
+// ascending order alphabets:
+console.log(stringArr.sort(), stringArr);
+
+// compare function: sort () accept function as parameter that compares two elements of the array.
+// it acceps two arguments and return the value that determins the sorting order.
+
+// 3 rules:
+
+/*
+
++ve => greater than 0 => sort b to lower index than a  => (bi < ai) => b comes first
+-ve = less than 0 => sort a to lower index than b => (ai  < bi ) => a comes first
+0 => number will not interchange
+*/
+
+[0,1][1,0]
+// a - b 1-0[0,1]
+[19,10, 8, 78, 89, 2, 34,3,0];
+a = 19,
+b=10
+// a-b = 19-10= 9 
+10, 19,  8, 78, 89, 2, 34,3,0
+a = 19,
+b = 8
+// 19-8 = +ve
+10, 8, 19, 78, 89, 2, 34,3,0
+ a= 19,
+ b = 78
+//  a- b = -ve
+ 10, 8, 19, 78, 89, 2, 34,3,0
+ 10, 8, 19, 78, 2,89, 34,3,0
+ 10, 8, 19, 78, 2,34, 89,3,0
+ 0,2,3, 8, 10,19, 34, 78, 89
+
+ a- b // ascending 
+
+ b- a // descending 
+unsortArr.sort(function(a,b){
+   
+    return b-a; // descending sorting
+    // a-b // ascending 
+})
+console.log(unsortArr);
+
+// sorting in descending order for string.
+// el, do, cat, bee
+var animals = ['cat', 'dog', 'elephant', 'bee'];
+[1,2]
+1> 2
++1
+// [ele, dog, cat, bee];
+console.log(
+    animals.sort( (a,b) => {
+        if( a > b){ 
+            return -1;
+        }
+        if( a < b){
+            return 1; // ele, cat
+        }
+        return 0;
+    })
+)
+
+// console.log( ('a'>'A'))
+
+// sorting with mixed chars(captial letters and small letters);
+
+var mixed = ['Cat', 'dog', 'Elephant', 'bee'];
+console.log(mixed.sort((a,b) => {
+    let x = a.toLowerCase(); // Cat => cat
+    let y = b.toLowerCase();
+
+    if(x > y){
+        return -1;
+    }
+    if(x < y ){
+        return 1;
+    }
+    return 0;
+}));
+
+// sorting of array of objects by specified property.
+
+var employee = [
+    {
+        name:'abhishek',
+        id:101,
+        salary:2000
+    }, 
+    {
+        name:'divyansh',
+        id:100,
+        salary:1000
+    }, 
+    {
+        name:'lovish',
+        id:99,
+        salary:5000
+    }
+]
+
+// 1- sorting by numeric property: Ascending.
+
+// console.log(employee.sort((a,b) => {
+//     return a.salary - b.salary; // ascending
+// }))
+
+
+
+// 2- sorting by numeric property: Ascending.
+
+// console.log(employee.sort((a,b) => {
+//     return b.salary - a.salary; // ascending
+// }))
+
+
+// 3- sorting by string prop: ascending
+
+// if needed in descending change the return value. (opposite)
+
+console.log(employee.sort((a,b)=> {
+    let x = a.name.toLowerCase();
+    let y = b.name.toLowerCase();
+
+    if(x > y){
+        return 1;
+    }
+    if(x < y){
+        return -1;
+    }
+    return 0;
+}))
+
+
+// var nameArr = employee.map((val) => {
+//     return val.name
+// });
+// console.log(nameArr);
+// nameArr.sort()
